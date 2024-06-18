@@ -29,7 +29,7 @@ const createThanks = (e) => {
   const html = `
     
             <div class="icon-container">
-                <img src="images/illustration-thank-you.svg" alt="" />
+                <img src="illustration-thank-you.svg" alt="" />
             </div>
 
             <div class="your-rate-container">
