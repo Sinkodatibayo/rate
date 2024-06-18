@@ -1,0 +1,240 @@
+/* FONT  */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* GLOBAL CSS */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  color: var(--color-1);
+}
+
+:root {
+  --primary: hsl(25, 97%, 53%);
+  --color-1: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+.card-container {
+  width: 380px;
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 150px auto;
+  align-self: center;
+  background: var(--dark-blue);
+  /* background: var(--very-dark-blue); */
+  border-radius: 20px;
+  padding: 30px;
+  gap: 10px;
+}
+body {
+  background-color: var(--very-dark-blue);
+  font-size: 18px;
+}
+p {
+  font-size: 15px;
+}
+/* GLOBAL CSS END */
+
+.star-container {
+  grid-column: span 12;
+  align-self: self-start;
+}
+.star-container {
+  background: var(--light-grey);
+  width: 40px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: hsl(213, 19%, 22%);
+}
+
+.header {
+  font-size: 24px;
+  grid-column: span 12;
+  font-weight: 600;
+}
+
+.asking-feedback-section {
+  grid-column: span 12;
+}
+
+.asking-feedback-section p {
+  color: var(--light-grey);
+}
+.feedback-container {
+  grid-column: span 12;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.feedback {
+  width: 50px;
+  height: 50px;
+  background: hsl(213, 19%, 22%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--light-grey);
+  transition: 0.3;
+  cursor: pointer;
+}
+
+.feedback:hover {
+  background-color: var(--primary);
+  color: var(--dark-blue);
+}
+
+.active {
+  background: var(--color-1);
+  color: var(--dark-blue);
+}
+
+.submit {
+  grid-column: span 12;
+  background: var(--primary);
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--very-dark-blue);
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3 ease;
+}
+
+.submit:hover {
+  background: var(--color-1);
+}
+
+.icon-container {
+  grid-column: span 12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.icon-container img {
+  padding: 10px;
+}
+.your-rate-container {
+  grid-column: span 12;
+  background: hsl(213, 19%, 22%);
+  width: 160px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 10px;
+  justify-self: center;
+}
+
+.your-rate-container p {
+  color: var(--primary);
+}
+
+.thanks-container {
+  grid-column: span 12;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.thanks-container p {
+  color: var(--light-grey);
+  line-height: 1.4rem;
+  width: 35ch;
+  margin-top: 10px;
+}
+.attribution {
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--light-grey);
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--color-1);
+}
+
+.attribution a:hover {
+  color: var(--primary);
+}
+
+/* MOBILE*/
+@media screen and (max-width: 375px) {
+  body{
+    
+    
+  }
+  .card-container {
+    width: 260px;
+    height: 260px;
+    aspect-ratio: 1;
+    grid-column: 2 / span 11;
+    align-self: center;
+    justify-self: center;
+    margin-top: 250px;
+    /* position: absolute;
+    top: 100px;
+    left: 40px; */
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .your-rate-container {
+    width: 160px;
+    height: 20px;
+    margin-bottom: 0;
+
+  }
+  .your-rate-container p {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+
+  .feedback {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feedback:hover {
+    background: var(--primary);
+  }
+  .thanks-container {
+    /* margin-top: 80px; */
+    /* margin: 10px; */
+    margin: 0;
+  }
+  .thanks-container p {
+    color: var(--light-grey);
+    width: 28ch;
+    font-size: 12px;
+    line-height: 1.1rem;
+    padding-bottom: 10px;
+  }
+
+  .attribution {
+    font-size: 12px;
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+  }
+}
